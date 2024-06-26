@@ -10,15 +10,11 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var viewModel = FrameworkGridViewModel()
     
-    let columns: [GridItem] = [
-        GridItem(.flexible()),
-        GridItem(.flexible()),
-        GridItem(.flexible())
-    ]
+
     var body: some View {
         NavigationView {
             ScrollView {
-                LazyVGrid(columns: columns){
+                LazyVGrid(columns: viewModel.columns){
                     ForEach(MockData.frameworks, id: \.id) {
                         framework in
                         FrameWorkTitleView(framework: framework)
@@ -41,18 +37,3 @@ struct ContentView: View {
     ContentView()
 }
 
-struct FrameWorkTitleView: View {
-    let framework: Framework
-     var body: some View {
-        VStack {
-            Image(framework.imageName)
-                .resizable()
-                .frame(width: 60, height: 60)
-            Text(framework.name)
-                .font(.title3)
-                .fontWeight(.semibold)
-                .scaledToFit()
-                .minimumScaleFactor(0.6)
-        }
-    }
-}
