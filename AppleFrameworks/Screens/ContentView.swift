@@ -27,7 +27,7 @@ struct ContentView: View {
             }.scrollIndicators(.hidden)
         }.navigationTitle("Apple Frameworks")
             .fullScreenCover(isPresented: $viewModel.isShowingDetailView) {
-                ContentDetail(framework: viewModel.selectedFramework ?? MockData.sampleFramework, isShowingDetailView: $viewModel.isShowingDetailView)
+                ContentDetail(viewModel: ContentDetailViewModel(framework: viewModel.selectedFramework!, isShowingDetailView: $viewModel.isShowingDetailView))
             }
     .padding()
     }

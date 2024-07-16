@@ -8,33 +8,37 @@
 import SwiftUI
 
 struct ContentDetail: View {
-    var framework: Framework
-    @Binding var isShowingDetailView: Bool
-    @State private var isShowingSafariView = false
+    @ObservedObject var viewModel: ContentDetailViewModel
 
     var body: some View {
         VStack {
-            XDissmissButton(isShowingDetailView: $isShowingDetailView)
+            XDissmissButton(isShowingDetailView: $viewModel.isShowingDetailView.wrappedValue)
             
             Spacer()
             
-            FrameWorkTitleView(framework: framework)
+            FrameWorkTitleView(framework: viewModel.framework)
             
-            Text(framework.description)
+            Text(viewModel.framework.description)
                 .font(.body)
                 .multilineTextAlignment(.center)
                 .padding()
             
             Spacer()
             
-            Button {
-                isShowingSafariView = true
-            } label: {
+            Link(destination: URL(string: viewModel.framework.urlString)!, label: {
                 AppButton(buttonText: "Learn More")
-            }
-            .sheet(isPresented: $isShowingSafariView) {
-                SafariView(url: URL(string: framework.urlString) ?? URL(string: "https://www.github.com")!)
-            }
+
+            })
+            
+//            Button {
+//                viewModel.isShowingSafariView = true
+//            } label: {
+//                AppButton(buttonText: "Learn More")
+//            }
+            
+//            .sheet(isPresented: $viewModel.isShowingSafariView) {
+//                SafariView(url: URL(string: viewModel.framework.urlString) ?? URL(string: "https://www.github.com")!)
+//            }
             .padding()
         }
     }
@@ -42,6 +46,6 @@ struct ContentDetail: View {
 
 struct ContentDetail_Previews: PreviewProvider {
     static var previews: some View {
-        ContentDetail(framework: MockData.sampleFramework, isShowingDetailView: .constant(false))
+        ContentDetail(viewModel: ContentDetailViewModel(framework: MockData.sampleFramework, isShowingDetailView: .constant(false)))
     }
 }

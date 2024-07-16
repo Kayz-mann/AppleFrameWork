@@ -19,6 +19,7 @@
 		0D1025772C25ABB600C69C75 /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1025762C25ABB600C69C75 /* AppButton.swift */; };
 		0D1025792C25B0C200C69C75 /* FrameworkGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1025782C25B0C200C69C75 /* FrameworkGridViewModel.swift */; };
 		0D10257B2C25C53600C69C75 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D10257A2C25C53600C69C75 /* SafariView.swift */; };
+		0D301C932C46A67D002F1BC8 /* ContentDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D301C922C46A67D002F1BC8 /* ContentDetailViewModel.swift */; };
 		0D8564AB2C2C3DD5000D7B6E /* FrameworkTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8564AA2C2C3DD5000D7B6E /* FrameworkTitleView.swift */; };
 		0D8564AD2C2C3E89000D7B6E /* XDissmissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8564AC2C2C3E89000D7B6E /* XDissmissButton.swift */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		0D1025762C25ABB600C69C75 /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
 		0D1025782C25B0C200C69C75 /* FrameworkGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkGridViewModel.swift; sourceTree = "<group>"; };
 		0D10257A2C25C53600C69C75 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
+		0D301C922C46A67D002F1BC8 /* ContentDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailViewModel.swift; sourceTree = "<group>"; };
 		0D8564AA2C2C3DD5000D7B6E /* FrameworkTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkTitleView.swift; sourceTree = "<group>"; };
 		0D8564AC2C2C3E89000D7B6E /* XDissmissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDissmissButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,6 +194,7 @@
 			children = (
 				0D1025482C247D2500C69C75 /* ContentView.swift */,
 				0D1025722C25A8FE00C69C75 /* ContentDetail.swift */,
+				0D301C922C46A67D002F1BC8 /* ContentDetailViewModel.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				0D1025732C25A8FE00C69C75 /* ContentDetail.swift in Sources */,
 				0D1025492C247D2500C69C75 /* ContentView.swift in Sources */,
 				0D1025712C248D0B00C69C75 /* Framework.swift in Sources */,
+				0D301C932C46A67D002F1BC8 /* ContentDetailViewModel.swift in Sources */,
 				0D8564AD2C2C3E89000D7B6E /* XDissmissButton.swift in Sources */,
 				0D1025472C247D2500C69C75 /* AppleFrameworksApp.swift in Sources */,
 				0D1025772C25ABB600C69C75 /* AppButton.swift in Sources */,
